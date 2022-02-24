@@ -1,0 +1,11 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^8.2.0",
+    "yargs": "^17.3.1"
+  }
+}
