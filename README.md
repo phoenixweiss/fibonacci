@@ -4,6 +4,14 @@ Various Algorithms to Calculate the nth Fibonacci Number
 ## Using fnm
 https://github.com/Schniz/fnm
 
+Adding a .node-version to your project is as simple as:
+
+```shell
+$ node --version
+v14.18.3
+$ node --version > .node-version
+```
+
 ### On Windows
 
 __PowerShell__
