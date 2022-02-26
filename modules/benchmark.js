@@ -2,18 +2,18 @@
 
 function benchmark(fn) {
 
-    let b = {}
+  let b = {}
 
-    let start = process.hrtime();
+  let start = process.hrtime();
 
-    fn
+  fn
 
-    let stop = process.hrtime(start);
+  let stop = process.hrtime(start);
 
-    b.output = fn
-    b.hrtime = (stop[0] * 1e9 + stop[1]) / 1e9
+  b.output = fn
+  b.hrtime = (stop[0] * 1e9 + stop[1]) / 1e9
 
-    return b
+  return b
 
 }
 
