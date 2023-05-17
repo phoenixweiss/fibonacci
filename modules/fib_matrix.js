@@ -1,5 +1,7 @@
 // Матричный алгоритм
 
+// TODO: Доделать!
+
 function fib(n) {
   return 'Not ready yet';
 }
