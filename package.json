@@ -4,12 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "eslint": "eslint -c .eslintrc.yml ./modules index.js",
+    "start": "node index.js"
+  },
   "dependencies": {
-    "inquirer": "^8.2.0",
-    "yargs": "^17.3.1"
+    "commander": "^10.0.1",
+    "inquirer": "^8.2.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^8.2.0"
-  },
-  "packageManager": "yarn@3.2.0"
+    "eslint": "^8.40.0"
+  }
 }

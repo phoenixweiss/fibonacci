@@ -1,61 +1,39 @@
-# fibonacci
-Various Algorithms to Calculate the nth Fibonacci Number
+# Fibonacci
 
-## Using fnm
-https://github.com/Schniz/fnm
+This repository contains various algorithms for calculating the nth Fibonacci number.
 
-Adding a .node-version to your project is as simple as:
+## Prerequisites
 
-```sh
-$ node --version
-v14.18.3
-$ node --version > .node-version
-```
+Before running this project, please ensure that you have the following installed:
 
-To install actual node version use:
+- asdf `~> 0.11.3`
+- nodejs `~> 18.16.0`
+- yarn `~> 1.22.19`
+
+To install classic `yarn`, run the following command:
 
 ```sh
-fnm install < .node-version
+npm install -g yarn
 ```
 
-### On Windows
-
-__PowerShell__
-Add the following to the end of your profile file:
-
-```powershell
-fnm env --use-on-cd | Out-String | Invoke-Expression
-```
-the profile is located at `$PROFILE`
-
-### On MacOS
-
-__zsh__
-Add the following to your `.zshrc` profile:
-
-```zsh
-eval "$(fnm env --use-on-cd)"
-```
-
-## Common setup
-
-### Install Corepack & Yarn
-The preferred way to manage Yarn is through Corepack, a new binary shipped with all Node.js releases starting from 16.10. For Node.js >=16.10, Corepack is included by default with all Node.js installs, but is currently opt-in. To enable it, run the following command:
+To install dependencies, run the following command:
 
 ```sh
-corepack enable
-```
-
-Install _yarn_:
-
-```sh
-yarn set version berry
-```
-
-Add ```nodeLinker: node-modules``` in your `.yarnrc.yml` file (if it's not already there).
-
-Install dependencies:
-
-```
 yarn install
+```
+
+## Usage
+
+To start the project, run the following command:
+
+```sh
+yarn start
+```
+
+## Linting
+
+To run the linter, run the following command:
+
+```sh
+yarn eslint
 ```

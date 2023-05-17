@@ -1,20 +1,15 @@
-const debug_mode = false
+import benchmark from './lib/benchmark.js';
+import inquirer from 'inquirer';
+
+const debug_mode = false;
 
 function debug(msg) {
   if (debug_mode == true) {
-    console.log(msg)
+    console.log(msg);
   }
 }
 
-import benchmark from './modules/benchmark.js'
-
-// import yargs from 'yargs'
-// import { hideBin } from 'yargs/helpers'
-// const argv = yargs(hideBin(process.argv)).argv
-
-// let result = benchmark(fib_loop(argv._[0]))
-
-const fib_alogorithms = [
+const fib_algorithms = [
   {
     name: 'Naive recursive algorithm',
     value: 'fib_recursive',
@@ -45,22 +40,20 @@ const fib_alogorithms = [
     value: 'fib_matrix',
     module: './modules/fib_matrix.js'
   }
-]
+];
 
 function findAlgByVal(algVal) {
-  return fib_alogorithms.find((x) => x.value === algVal);
+  return fib_algorithms.find((x) => x.value === algVal);
 }
-
-import inquirer from 'inquirer'
 
 inquirer
   .prompt([
     {
       type: 'rawlist',
-      name: 'fib_alogorithm',
+      name: 'fib_algorithm',
       message: 'Which algorithm should be used?',
       choices: [
-        ...fib_alogorithms
+        ...fib_algorithms
       ]
     },
     {
@@ -70,19 +63,12 @@ inquirer
     }
   ])
   .then(answers => {
-
-    debug(JSON.stringify(answers))
-
-    let alg = findAlgByVal(answers.fib_alogorithm)
-
-    console.log(`Finding Fibonacci number ${answers.fib_n} using ${alg.name} from ${alg.module}`)
+    debug(JSON.stringify(answers));
+    let alg = findAlgByVal(answers.fib_algorithm);
+    console.log(`Finding Fibonacci number ${answers.fib_n} using ${alg.name} from ${alg.module}`);
 
     import(alg.module).then(module => {
-
-      let result = benchmark(module.default(answers.fib_n))
-
-      console.log(`The number is ${result.output}, found in ${result.hrtime} seconds.`)
-
-    })
-
+      let result = benchmark(module.default(answers.fib_n));
+      console.log(`The number is ${result.output}, found in ${result.hrtime} seconds.`);
+    });
   });

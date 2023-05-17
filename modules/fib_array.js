@@ -9,7 +9,7 @@ function fib_array(n) {
       cache[n] = result;
     }
     return result;
-  };
+  }
   return fib(n);
 }
 
