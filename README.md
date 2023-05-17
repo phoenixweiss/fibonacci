@@ -1,5 +1,13 @@
 # Fibonacci
 
+```ascii
+'||''''|  ||  '||                                                ||
+ ||  .   ...   || ...    ...   .. ...    ....     ....    ....  ...
+ ||''|    ||   ||'  || .|  '|.  ||  ||  '' .||  .|   '' .|   ''  ||
+ ||       ||   ||    | ||   ||  ||  ||  .|' ||  ||      ||       ||
+.||.     .||.  '|...'   '|..|' .||. ||. '|..'|'  '|...'  '|...' .||.
+```
+
 This repository contains various algorithms for calculating the nth Fibonacci number.
 
 ## Prerequisites

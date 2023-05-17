@@ -9,6 +9,14 @@ function debug(msg) {
   }
 }
 
+const logo = `
+'||''''|  ||  '||                                                ||
+ ||  .   ...   || ...    ...   .. ...    ....     ....    ....  ...
+ ||''|    ||   ||'  || .|  '|.  ||  ||  '' .||  .|   '' .|   ''  ||
+ ||       ||   ||    | ||   ||  ||  ||  .|' ||  ||      ||       ||
+.||.     .||.  '|...'   '|..|' .||. ||. '|..'|'  '|...'  '|...' .||.
+`;
+
 const fib_algorithms = [
   {
     name: 'Naive recursive algorithm',
@@ -45,6 +53,8 @@ const fib_algorithms = [
 function findAlgByVal(algVal) {
   return fib_algorithms.find((x) => x.value === algVal);
 }
+
+console.log(logo);
 
 inquirer
   .prompt([
