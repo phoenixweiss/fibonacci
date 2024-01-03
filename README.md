@@ -8,15 +8,15 @@
 .||.     .||.  '|...'   '|..|' .||. ||. '|..'|'  '|...'  '|...' .||.
 ```
 
-This repository contains various algorithms for calculating the nth Fibonacci number.
+This repository contains various algorithms for calculating the n-th Fibonacci number.
 
 ## Prerequisites
 
 Before running this project, please ensure that you have the following installed:
 
-- asdf `~> 0.11.3`
-- nodejs `~> 18.16.0`
-- yarn `~> 1.22.19`
+- _asdf_ `~> 0.11.3` /or/ _nvm_ `~> 1.1.12`
+- _nodejs_ `~> 20.10.0`
+- _yarn_ `~> 1.22.21`
 
 To install classic `yarn`, run the following command:
 
