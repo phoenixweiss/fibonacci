@@ -78,7 +78,8 @@ inquirer
     console.log(`Finding Fibonacci number ${answers.fib_n} using ${alg.name} from ${alg.module}`);
 
     import(alg.module).then(module => {
-      let result = benchmark(module.default(answers.fib_n));
+      const result = benchmark(module.default, Number(answers.fib_n));
       console.log(`The number is ${result.output}, found in ${result.hrtime} seconds.`);
     });
+
   });
