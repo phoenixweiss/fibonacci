@@ -110,35 +110,6 @@ Run `yarn start -l` to see the full list of algorithms. Below are the included a
 
 ---
 
-## Examples in Action
-
-1. **Calculate the 10th Fibonacci number using the matrix algorithm**:
-
-   ```bash
-   yarn start fib_matrix 10
-   ```
-
-   Output:
-
-   ```txt
-   Finding Fibonacci number 10 using Matrix algorithm from ./modules/fib_matrix.js
-   The number is 55, found in 0.000001 seconds.
-   ```
-
-2. **List all available algorithms**:
-
-   ```bash
-   yarn start -l
-   ```
-
-3. **Show help**:
-
-   ```bash
-   yarn start -h
-   ```
-
----
-
 ## Linting
 
 To ensure code quality, run the linter:
